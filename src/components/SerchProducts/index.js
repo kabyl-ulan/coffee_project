@@ -12,7 +12,7 @@ const SearchProducts = () => {
     const {search_product} = useSelector(s => s.search_product)
     useEffect(() => {
         dispatch(getSearchProduct(search))
-    }, [dispatch])
+    }, [search])
     return (
         <section id='search'>
             <div className="container">

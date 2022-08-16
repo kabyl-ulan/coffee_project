@@ -20,19 +20,22 @@ a, a:hover {
 }
 
 body, html {
+  transition: 0.2s;
   background-color: var(--background-color);
 }
 
 html[data-theme=dark] {
   --input-background-color: #8E8E8E;
   --background-color: #171717;
-  --basket-background-color: black;
+  --card-background-color: black;
+  --placeholder-color: #FFFFFF;
 }
 
 html[data-theme=light] {
   --input-background-color: #F5E9E1;
   --background-color: #FFF3E8;
-  --basket-background-color: white;
+  --card-background-color: white;
+  --placeholder-color: #000000;
 }
 
 #header {
@@ -96,7 +99,7 @@ html[data-theme=light] {
   color: #E6AC77;
 }
 #header .header__search__input::placeholder {
-  color: black;
+  color: var(--placeholder-color);
 }
 #header .header__elem {
   position: relative;

@@ -8,7 +8,7 @@ import {RiAddFill} from "react-icons/ri";
 
 const InBasketProduct = ({el}) => {
     const dispatch = useDispatch()
-    const {title, quantity, price} = el
+    const {title, quantity, price, id} = el
     return (
         <div className="in-basket">
             <img className="in-basket__img"
@@ -17,14 +17,14 @@ const InBasketProduct = ({el}) => {
                 <div className="in-basket__elem__item1">
                     <h2 className="in-basket__elem__item1__title">{title}</h2>
                     <BsBasket2 className="in-basket__elem__item1__icon"
-                        onClick={() => dispatch(deleteFromProductBasket(el.id))}
+                               onClick={() => dispatch(deleteFromProductBasket(id))}
                     />
                 </div>
                 <div className="in-basket__elem__item2">
                     <p className="in-basket__elem__item2__price">{price} сом</p>
                     <div className="in-basket__elem__item2__quantity">
                          <span className="in-basket__elem__item2__quantity__span"
-                              onClick={() => dispatch(decreaseQty(el.id))}
+                               onClick={() => dispatch(decreaseQty(id))}
                          > <AiOutlineMinus className="in-basket__elem__item2__quantity__span__icon"/>
                          </span>
                         <div className="in-basket__elem__item2__quantity__san">
@@ -33,7 +33,7 @@ const InBasketProduct = ({el}) => {
                             </div>
                         </div>
                         <span className="in-basket__elem__item2__quantity__span"
-                            onClick={() => dispatch(addToBasket(el))}
+                              onClick={() => dispatch(addToBasket(el))}
                         > <RiAddFill className="in-basket__elem__item2__quantity__span__icon"/>
                         </span>
                     </div>

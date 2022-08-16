@@ -16,8 +16,8 @@
   &::-webkit-scrollbar {
     width: 3px; /* ширина для вертикального скролла */
     height: 3px; /* высота для горизонтального скролла */
-    background-color: #FFF3E8;
-
+    background-color: var(--card-background-color);
+    border-radius: 9em;
   }
 
   &::-webkit-scrollbar-thumb {

@@ -4,11 +4,9 @@ import InBasketProduct from "./InBasketProduct";
 
 const TrueBasket = ({handleClickBasket}) => {
     const {basket} = useSelector(s => s.basket)
-
-    // const resultQuantity = (basket.reduce((acc,el)=> acc.quantity + el.quantity))
-    //
-    // let resultPrice = resultQuantity * basket.reduce(product => product.price)
-    // console.log(resultPrice)
+    const totalSum = basket.reduce((acc, el) => {
+        return acc + (el.price ) * el.quantity
+    }, 0)
     return (
         <div className="basket_product_true">
             <div className="basket_product_true__elem">
@@ -22,7 +20,8 @@ const TrueBasket = ({handleClickBasket}) => {
                     <textarea name="" id="" cols="25" rows="10" placeholder="Комментарий к заказу...">
                     </textarea>
                 <div className="basket_product_true__item__price">
-                    <p className="basket_product_true__item__price__title">К оплате: <span>  сом</span></p>
+                    <p className="basket_product_true__item__price__title">К оплате: {totalSum}
+                        <span>  сом</span></p>
                 </div>
                 <div className="basket_product_true__item__button">
                     <button

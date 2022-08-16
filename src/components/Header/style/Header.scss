@@ -68,7 +68,7 @@
         @include par;
 
         &::placeholder {
-          color: black;
+          color: var(--placeholder-color);
         }
       }
     }

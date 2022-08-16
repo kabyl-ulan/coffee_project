@@ -12,7 +12,7 @@
 
     &__block {
       width: 20%;
-      background: #FFFFFF;
+      background: var(--card-background-color);
       border-radius: 15px;
       border: 1px solid #E5AC77;
       margin-bottom: 0.8rem;
@@ -29,8 +29,9 @@
 
         &__title {
           @include title;
+          font-size: 1.1rem;
           padding-left: 0.6vw;
-          padding-bottom: 0.1rem;
+          padding-bottom: 0.3rem;
         }
       }
     }

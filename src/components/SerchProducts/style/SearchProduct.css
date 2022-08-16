@@ -19,6 +19,7 @@ a, a:hover {
 }
 
 body, html {
+  transition: 0.2s;
   background-color: var(--background-color);
 }
 
@@ -42,17 +43,26 @@ body, html {
   padding: 0.4rem;
 }
 #search .search__card__item__title {
+  width: 100%;
+  height: 2rem;
+  position: relative;
+  margin-bottom: 0.2rem;
+}
+#search .search__card__item__title__elem {
   font-family: "Playfair Display", sans-serif;
   font-weight: 700;
   font-size: 1rem;
   color: #E6AC77;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #search .search__card__item__volume {
   font-family: "Playfair Display", sans-serif;
   font-weight: 700;
   font-size: 1rem;
   color: #E6AC77;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 #search .search__card__item__elem {
   display: flex;
@@ -77,6 +87,7 @@ body, html {
   color: #E6AC77;
   font-size: 12px;
   transition: 0.3s;
+  background: var(--card-background-color);
 }
 #search .search__card__item__elem__btn:hover {
   background: #E6AC77;

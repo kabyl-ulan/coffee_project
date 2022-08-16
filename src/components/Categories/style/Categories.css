@@ -20,6 +20,7 @@ a, a:hover {
 }
 
 body, html {
+  transition: 0.2s;
   background-color: var(--background-color);
 }
 
@@ -40,7 +41,8 @@ body, html {
   /* ширина для вертикального скролла */
   height: 3px;
   /* высота для горизонтального скролла */
-  background-color: #FFF3E8;
+  background-color: var(--card-background-color);
+  border-radius: 9em;
 }
 #categories::-webkit-scrollbar-thumb {
   background-color: #AF8057;

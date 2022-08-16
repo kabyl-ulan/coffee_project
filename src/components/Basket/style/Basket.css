@@ -19,6 +19,7 @@ a, a:hover {
 }
 
 body, html {
+  transition: 0.2s;
   background-color: var(--background-color);
 }
 
@@ -95,7 +96,7 @@ body, html {
   color: #E6AC77;
   font-size: 12px;
   transition: 0.3s;
-  background: #FFF3E8;
+  background: var(--card-background-color);
   font-size: 1.25rem;
 }
 #basket .basket_product_false__link__btn:hover {
@@ -116,7 +117,7 @@ body, html {
   height: 15rem;
   overflow-y: auto;
   overflow-x: hidden;
-  background: var(--basket-background-color);
+  background: var(--card-background-color);
   border-radius: 13px;
   padding: 0.5rem;
   margin-right: 0.5rem;
@@ -126,7 +127,7 @@ body, html {
   /* ширина для вертикального скролла */
   height: 3px;
   /* высота для горизонтального скролла */
-  background-color: #FFFFFF;
+  background-color: var(--card-background-color);
   border-radius: 9em;
 }
 #basket .basket_product_true__elem::-webkit-scrollbar-thumb {
@@ -147,12 +148,18 @@ body, html {
   width: 95%;
   padding: 0.5rem;
   border: 2px solid #EBBE93;
+  color: #AF8057;
+  background: var(--card-background-color);
   border-radius: 9px;
   outline: none;
   resize: none;
 }
+#basket .basket_product_true__item textarea::placeholder {
+  color: var(--placeholder-color);
+}
 #basket .basket_product_true__item__price {
   width: 100%;
+  background: var(--card-background-color);
   padding: 0.6rem 0.2rem;
   border: 2px solid #EBBE93;
   border-radius: 9px;
@@ -182,9 +189,10 @@ body, html {
   transition: 0.3s;
   width: 100%;
   font-size: 1rem;
+  background: var(--card-background-color);
   border: 2px solid #EBBE93;
   border-radius: 5px;
-  padding: 0.5rem 0.8rem;
+  padding: 0.5rem 0.9rem;
 }
 #basket .basket_product_true__item__button__btn:hover {
   background: #E6AC77;

@@ -7,19 +7,18 @@ import basket__logo from '../../image/basket.svg';
 import rectangle from '../../image/rectangle.svg';
 import Basket from "../Basket";
 import {BiSearch} from "react-icons/bi";
-import {useTheme} from '../../hooks/use-theme'
+import {useTheme} from '../../hooks/use-theme';
 
 const Header = () => {
+    const [search, setSearch] = useState('')
+    const [click, setClick] = useState(false)
     const {setTheme} = useTheme()
-
     const handleDark = () => {
         setTheme("dark")
     }
-
     const handleLight = () => {
         setTheme("light")
     }
-
     const [dark_white, setDark_White] = useState(false)
     const clickDark_White = () => {
         if (dark_white) {
@@ -29,10 +28,6 @@ const Header = () => {
         }
         setDark_White(!dark_white)
     }
-
-
-    const [search, setSearch] = useState('')
-    const [click, setClick] = useState(false)
     const navigate = useNavigate()
     const handleChange = (e) => {
         setSearch(e.target.value)

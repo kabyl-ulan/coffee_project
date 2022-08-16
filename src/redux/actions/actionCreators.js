@@ -54,6 +54,13 @@ export const addToBasket = (product) => {
     return {type: ADD_TO_BASKET, payload: product}
 }
 
+export const deleteFromProductBasket = (id) => {
+    const basket = JSON.parse(sessionStorage.getItem('basket'))
+    const updateBasket = basket.filter(el => el.id !== id)
+    sessionStorage.setItem('basket', JSON.stringify(updateBasket))
+    return {type: DELETE_FROM_BASKET, payload: id}
+}
+
 export const decreaseQty = (id) => {
     let basket = JSON.parse(sessionStorage.getItem('basket')) || []
     const findProduct = basket.find(el => el.id === id)
@@ -72,10 +79,4 @@ export const decreaseQty = (id) => {
     return {type: DECREASE_QUANTITY, payload: id}
 }
 
-export const deleteFromProductBasket = (id) => {
-    const basket = JSON.parse(sessionStorage.getItem('basket'))
-    const updateBasket = basket.filter(el => el.id !== id)
-    sessionStorage.setItem('basket', JSON.stringify(updateBasket))
-    return {type: DELETE_FROM_BASKET, payload: id}
-}
 

@@ -24,7 +24,8 @@ const Basket = ({handleClickBasket}) => {
                 <div>
                     {
                         basket.length ?
-                            (<TrueBasket/>)
+                            (<TrueBasket
+                                handleClickBasket={handleClickBasket}/>)
                             :
                             (<FalseBasket
                                 handleClickBasket={handleClickBasket}

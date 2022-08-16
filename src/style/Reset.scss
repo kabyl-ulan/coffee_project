@@ -21,6 +21,7 @@ a, a:hover {
 }
 
 body, html {
+  transition: .2s;
   background-color: var(--background-color);
 }
 
@@ -38,9 +39,9 @@ body, html {
   color: #E6AC77;
 }
 
-@mixin btn{
+@mixin btn {
   box-sizing: border-box;
- padding: 5px 10px;
+  padding: 5px 10px;
   border: 1px solid #E6AC77;
   background: #FFFFFF;
   border-radius: 3px;
@@ -49,12 +50,12 @@ body, html {
   font-size: 12px;
   transition: .3s;
 
-  &:hover{
+  &:hover {
     background: #E6AC77;
     color: #FFFFFF;
     transform: scale(1.02);
   }
-  &:active{
+  &:active {
     opacity: 80%;
   }
 }
