@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+#root {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+body, html {
+  background-color: var(--background-color);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+}
+
+/*# sourceMappingURL=Media.css.map */
