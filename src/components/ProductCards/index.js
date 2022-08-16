@@ -19,7 +19,8 @@ const ProductCards = () => {
                 <div className="container">
                     <div className="product_cards">
                         <Categories/>
-                        <div className="food-cards">
+                        <div style={cards_product.length < 4 ? {overflow: "hidden"} : {overflowX: "auto"}}
+                             className="food-cards">
                             <div className="food-cards__elem">
                                 {
                                     cards_product.map(el => (
