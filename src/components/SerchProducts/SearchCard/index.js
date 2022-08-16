@@ -20,7 +20,7 @@ const SearchCard = ({el}) => {
                 <div className="search__card__item__elem">
                     <h3 className="search__card__item__elem__price">{price} сом</h3>
                     <button className="search__card__item__elem__btn"
-                            style={isAdded ? {background: '#2a2727'} : {background: ''}}
+                            style={isAdded ? {background: '#AF8057'} : {background: ''}}
                             onClick={() => dispatch(addToBasket(el))}
                     >
                         {

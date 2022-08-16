@@ -1,10 +1,11 @@
 import React from 'react';
 import {BsFillBasket3Fill} from "react-icons/bs";
+import './Added.scss'
 
 const AddedToBasket = () => {
     return (
         <>
-            <span>Добавлен <BsFillBasket3Fill/></span>
+            <span className="added">Добавлен <BsFillBasket3Fill/></span>
         </>
     );
 };

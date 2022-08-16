@@ -9,6 +9,7 @@ import {RiAddFill} from "react-icons/ri";
 const InBasketProduct = ({el}) => {
     const dispatch = useDispatch()
     const {title, quantity, price, id} = el
+    let resultPrice = +quantity * +price
     return (
         <div className="in-basket">
             <img className="in-basket__img"
@@ -21,7 +22,7 @@ const InBasketProduct = ({el}) => {
                     />
                 </div>
                 <div className="in-basket__elem__item2">
-                    <p className="in-basket__elem__item2__price">{price} сом</p>
+                    <p className="in-basket__elem__item2__price">{resultPrice} сом</p>
                     <div className="in-basket__elem__item2__quantity">
                          <span className="in-basket__elem__item2__quantity__span"
                                onClick={() => dispatch(decreaseQty(id))}
