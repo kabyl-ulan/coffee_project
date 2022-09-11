@@ -78,5 +78,3 @@ export const decreaseQty = (id) => {
     sessionStorage.setItem('basket', JSON.stringify((basket)))
     return {type: DECREASE_QUANTITY, payload: id}
 }
-
-

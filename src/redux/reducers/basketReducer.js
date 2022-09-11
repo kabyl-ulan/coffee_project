@@ -12,7 +12,7 @@ export const basketReducer = (state = initialState, action) => {
                 return {
                     ...state, basket: state.basket.map(el => el.id === action.payload.id ?
                         {...el, quantity: el.quantity + 1} : el)
-                }
+                 }
             } else {
                 return {...state, basket: [...state.basket, {...action.payload, quantity: 1}]}
             }
