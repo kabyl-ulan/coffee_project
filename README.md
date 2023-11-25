@@ -1,4 +1,4 @@
-This is a [React.js](https://react.dev/), [Sass](https://sass-lang.com/) and [Javascript](https://github.com/topics/javascript) starter. You can use this to start your React.js + Sass + Javascript development faster and easier.
+This is a [React.js](https://react.dev/), [Redux.js](https://redux.js.org/), [Sass](https://sass-lang.com/) and [Javascript](https://github.com/topics/javascript) starter. You can use this to start your React.js + Sass + Javascript development faster and easier.
 
 ## Getting Started
 
